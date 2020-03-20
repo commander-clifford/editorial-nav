@@ -1,0 +1,124 @@
+:root {
+  // sudo design system variables
+  --main-border-size: 1px;
+  --main-space-0: 4px;
+  --main-space-1: 1em;
+  --main-space-2: 2em;
+  --main-space-3: 3em;
+  --main-space-4: 4em;
+  --main-space-5: 5em;
+  --main-space-6: 6em;
+  --main-space-7: 7em;
+  --main-space-8: 8em;
+  --main-color-nav: #9c9c9c;
+  --main-color-body: #444444;
+  --main-color-border: #dddddd;
+  --main-color-highlight: #197ec8;
+  --main-color-bg: #FFFFFF;
+  --main-font-family: -apple-system, sans-serif, verdana;
+}
+
+* { box-sizing: border-box; }
+
+#root {
+  /* this is an exeption to my common rule of only class selectors in CSS */
+   min-width: 900px;
+   /* HACK: not going responsive in this exercise so setting min-width before content starts to break undesirably */
+}
+
+.navigation {
+  margin-top: var(--main-space-8);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: var(--main-color-bg);
+}
+
+.navigation__list {
+  position: relative;
+  font-family: var(--main-font-family);
+  /* font-weight: 300; */
+  border-bottom: var(--main-border-size) solid var(--main-color-border);
+  color: var(--main-color-nav);
+  margin: 0;
+  padding: 0 var(--main-space-8);
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__item {
+  padding: 0;
+  display: block;
+}
+
+.navigation__link {
+  padding: var(--main-space-1) var(--main-space-0);
+  display: block;
+  cursor: pointer;
+}
+
+.navigation__link {
+  background-position: center;
+  transition: background 0.8s;
+}
+.navigation__link:hover {
+  background: white radial-gradient(circle, rgba(40,40,40,0) 1%, white 1%) center/15000%;
+}
+.navigation__link:active {
+  background-color: rgba(40,40,40,0.1);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.navigation__link:hover { color: var(--main-color-highlight) }
+.navigation__link--active {
+  color: var(--main-color-body) !important;
+  cursor: default;
+}
+
+.articles {
+  font-family: var(--main-font-family);
+  color: var(--main-color-body);
+  margin: var(--main-space-2) var(--main-space-8);
+  padding: var(--main-space-1);
+}
+.section {
+  display: none;
+}
+.section--active {
+  display: block;
+}
+.section .section__head {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+.section .section__body {
+  height: 140vh; /* HACK: in effort to high-light stcky nav with no lower elements */
+}
+
+.section .title {
+  font-size: var(--main-space-2);
+  margin-bottom: 0;
+}
+.section .desc {
+  font-size: var(--main-space-1);
+}
+
+.section .time {
+  font-style: italic;
+  font-size: 12px;
+  color: var(--main-color-nav);
+}
+
+.slider {
+  position: absolute;
+  height: var(--main-border-size);
+  top: 100%;
+  left: 0px;
+  background-color: var(--main-color-body);
+  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+}
