@@ -60,6 +60,8 @@
   cursor: pointer;
 }
 
+/*
+The Ripple Effect
 .navigation__link {
   background-position: center;
   transition: background 0.8s;
@@ -72,6 +74,7 @@
   background-size: 100%;
   transition: background 0s;
 }
+*/
 
 .navigation__link:hover { color: var(--main-color-highlight) }
 .navigation__link--active {
