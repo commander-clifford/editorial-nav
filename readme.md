@@ -22,7 +22,7 @@ on how this should look and behave.
 _slider-nav.mov_
 
 ##### Completed Assessment Git repo:
-https://github.com/commander-clifford/editorial-nav/blob/master/main.js
+https://github.com/commander-clifford/editorial-nav/
 
 ##### Notes:
 
